@@ -1,21 +1,17 @@
-<h1><img src="src/assets/images/kayak-logo.svg" alt="kayak-logo"><br>KAYAK Frontend Software Engineer Coding Exercise</h1>
-<p>A web application that displays information about various airlines.</p>
+<h1><img src="src/assets/images/onbeszed-logo.svg" alt="onbeszed"><br>My art website</h1>
+<p>Hello, I am Atanas Tálos, in my free time I am a writer and a graphic designer. Here you can see my poems, short stories and my vector graphics!</p>
 
 <h2>About me</h2>
-<p>Hi, my name is Atanas Tálos, I am a Hungarian full-stack developer, based in Berlin. I have 1,5 year experience with Java (Spring Boot) and TypeScript (React, Angular).</p>
+<p>I am working as a full-stack developer. I have 1,5 year experience with Java (Spring Boot) and TypeScript (React, Angular).
+I've built this site for myself and my creative works.</p>
 <p><a href="https://atanastalos.com/" target="_blank">Here</a> you can check my resume website.</p>
-
-<h2>About the project</h2>
-<p>I used React framework. The application fetches a list of airlines, shows data on cards. On hover data of cards
-changes. I shortened displayed links for better layout. Cards are filterable by alliance names. The application is 
-responsive.</p>
 
 <h2>Framework, language, tools :fire:</h2>
 <ul>
     <li><a href="https://www.typescriptlang.org/docs/handbook/react.html" target="_blank">React with TypeScript</a></li>
     <li><a href="https://typescript-eslint.io/" target="_blank">Eslint</a></li>
     <li><a href="https://prettier.io/" target="_blank">Prettier</a></li>
-    <li><a href="https://www.npmjs.com/package/fetch-jsonp" target="_blank">Fetching JSONP</a></li>
+    <li><a href="https://www.npmjs.com/package/json-server" target="_blank">Json-server</a></li>
     <li><a href="https://styled-components.com/" target="_blank">Styled components</a></li>
     <li><a href="https://sass-lang.com/" target="_blank">SASS</a></li>
 </ul>
@@ -27,11 +23,15 @@ src
 │
 ├── app                   
 │   ├── components 
-│   │   └── airlines 
+│   │   └── publications 
 │   │   └── header
 │   │   └── home
+│   │   └── footer
+│   ├── data
 │   ├── hooks
-└── assets
+├── assets
+│   └── fonts 
+│   └── images
 </pre>
 
 <h2>Available Scripts</h2>
@@ -44,4 +44,5 @@ src
 remove the single build dependency from your project.</li>
   <li><b>npm run eslint</b> - It identifies and reports on patterns found in TypeScript code, with the goal of making code more consistent and avoiding bugs.</li>
   <li><b>npm run prettier</b> - It formats code.</li>
+  <li><b>npm run json-server</b> - It runs json-server.</li>
 </ul>
