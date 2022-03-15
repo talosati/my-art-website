@@ -1,4 +1,4 @@
-<h1><img src="src/assets/images/onbeszed-logo.svg" alt="onbeszed"><br>My art website</h1>
+<h1><img src="src/assets/images/onbeszed-logo.svg" width="200px" alt="onbeszed"><br>My art website</h1>
 <p>Hello, I am Atanas Tálos, in my free time I am a writer and a graphic designer. Here you can see my poems, short stories and my vector graphics!</p>
 
 <h2>About me</h2>
