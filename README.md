@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+<h1><img src="src/assets/images/kayak-logo.svg" alt="kayak-logo"><br>KAYAK Frontend Software Engineer Coding Exercise</h1>
+<p>A web application that displays information about various airlines.</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h2>About me</h2>
+<p>Hi, my name is Atanas Tálos, I am a Hungarian full-stack developer, based in Berlin. I have 1,5 year experience with Java (Spring Boot) and TypeScript (React, Angular).</p>
+<p><a href="https://atanastalos.com/" target="_blank">Here</a> you can check my resume website.</p>
 
-## Available Scripts
+<h2>About the project</h2>
+<p>I used React framework. The application fetches a list of airlines, shows data on cards. On hover data of cards
+changes. I shortened displayed links for better layout. Cards are filterable by alliance names. The application is 
+responsive.</p>
 
-In the project directory, you can run:
+<h2>Framework, language, tools :fire:</h2>
+<ul>
+    <li><a href="https://www.typescriptlang.org/docs/handbook/react.html" target="_blank">React with TypeScript</a></li>
+    <li><a href="https://typescript-eslint.io/" target="_blank">Eslint</a></li>
+    <li><a href="https://prettier.io/" target="_blank">Prettier</a></li>
+    <li><a href="https://www.npmjs.com/package/fetch-jsonp" target="_blank">Fetching JSONP</a></li>
+    <li><a href="https://styled-components.com/" target="_blank">Styled components</a></li>
+    <li><a href="https://sass-lang.com/" target="_blank">SASS</a></li>
+</ul>
 
-### `npm start`
+<h2>Project structure</h2>
+<pre>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+src
+│
+├── app                   
+│   ├── components 
+│   │   └── airlines 
+│   │   └── header
+│   │   └── home
+│   ├── hooks
+└── assets
+</pre>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<h2>Available Scripts</h2>
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p>In the project directory, you can run:</p>
+<ul>
+  <li><b>npm start</b> - Open <a href="http://localhost:3000" target="_blank">http://localhost:3000</a> to view it in the browser.</li>
+  <li><b>npm run build</b> - It correctly bundles React in production mode and optimizes the build for the best performance.</li>
+  <li><b>npm run eject</b> - If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will
+remove the single build dependency from your project.</li>
+  <li><b>npm run eslint</b> - It identifies and reports on patterns found in TypeScript code, with the goal of making code more consistent and avoiding bugs.</li>
+  <li><b>npm run prettier</b> - It formats code.</li>
+</ul>

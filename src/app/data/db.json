@@ -1,0 +1,144 @@
+{
+  "publications": [
+    {
+      "id": 1,
+      "date": "2022/02",
+      "journal": "PRAE.HU",
+      "journalLogo": "https://www.praekiado.hu/wp-content/uploads/2020/09/praelogo-300x296-black.png",
+      "title": "Berlin, Spandau (4)",
+      "link": "https://www.prae.hu/article/12700-berlin-spandau-4/",
+      "type": "tárca",
+      "accessible": "O"
+    },
+    {
+      "id": 2,
+      "date": "2022/02",
+      "journal": "PRAE.HU",
+      "journalLogo": "https://www.praekiado.hu/wp-content/uploads/2020/09/praelogo-300x296-black.png",
+      "title": "Berlin, Spandau (3)",
+      "link": "https://www.prae.hu/article/12679-berlin-spandau-3/",
+      "type": "tárca",
+      "accessible": "O"
+    },
+    {
+      "id": 3,
+      "date": "2022/03",
+      "journal": "PRAE.HU",
+      "journalLogo": "https://www.praekiado.hu/wp-content/uploads/2020/09/praelogo-300x296-black.png",
+      "title": "Berlin, Spandau (2)",
+      "link": "https://www.prae.hu/article/12665-berlin-spandau-2/",
+      "type": "tárca",
+      "accessible": "O"
+    },
+    {
+      "id": 4,
+      "date": "2022/03",
+      "journal": "PRAE.HU",
+      "journalLogo": "https://www.praekiado.hu/wp-content/uploads/2020/09/praelogo-300x296-black.png",
+      "title": "Berlin, Spandau (1)",
+      "link": "https://www.prae.hu/article/12634-berlin-spandau-1/",
+      "type": "tárca",
+      "accessible": "O"
+    },
+    {
+      "id": 5,
+      "date": "2022/01",
+      "journal": "SZIFOnline",
+      "journalLogo": "https://www.szifonline.hu/images/szifonline_logo.png",
+      "title": "Nincs",
+      "link": "https://www.szifonline.hu/szepirodalom/proza/2603-nincs-2022-01-06",
+      "type": "novella",
+      "accessible": "O"
+    },
+    {
+      "id": 6,
+      "date": "2022/01",
+      "journal": "Holdkatlan",
+      "journalLogo": "https://i.pinimg.com/originals/7b/a4/c4/7ba4c4880e39505e7594b7e5a817ee27.png",
+      "title": "Folyók [...]",
+      "link": "https://holdkatlan.hu/index.php/szepirodalom/vers/11314-talos-atanaz-versei-folyok-poraz-kapcsolat",
+      "type": "vers",
+      "accessible": "O"
+    },
+    {
+      "id": 7,
+      "date": "2021/06",
+      "journal": "Holdkatlan",
+      "journalLogo": "https://i.pinimg.com/originals/7b/a4/c4/7ba4c4880e39505e7594b7e5a817ee27.png",
+      "title": "Tárgy",
+      "link": "https://holdkatlan.hu/index.php/gorcso/10777-talos-atanaz-targy",
+      "type": "vers",
+      "accessible": "O"
+    },
+    {
+      "id": 8,
+      "date": "2021/06",
+      "journal": "Zabella",
+      "journalLogo": "https://scontent.ftxl2-1.fna.fbcdn.net/v/t1.6435-9/199508274_648324966566908_5759871503426143350_n.png?_nc_cat=110&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=-UKT6z1R0wkAX9fdLos&_nc_ht=scontent.ftxl2-1.fna&oh=00_AT9s_MiXnLxcnoXWDriGUxgZNGw1cvcU8QgW9M99rhdI9w&oe=6254B38A",
+      "title": "((( )))",
+      "link": "https://www.instagram.com/p/CQJqVcuBc9D/",
+      "type": "vers",
+      "accessible": "P"
+    },
+    {
+      "id": 9,
+      "date": "2021/05",
+      "journal": "Holdkatlan",
+      "journalLogo": "https://i.pinimg.com/originals/7b/a4/c4/7ba4c4880e39505e7594b7e5a817ee27.png",
+      "title": "Nyár",
+      "link": "https://holdkatlan.hu/index.php/szepirodalom/vers/10648-talos-atanaz-nyar",
+      "type": "vers",
+      "accessible": "O"
+    },
+    {
+      "id": 10,
+      "date": "2021/05",
+      "journal": "Új Forrás",
+      "journalLogo": "https://ujforras.hu/wp-content/uploads/2018/09/logo-2.png",
+      "title": "Krízis",
+      "link": "https://ujforras.hu/megjelent-az-uj-forras-majusi-szama-5/",
+      "type": "novella",
+      "accessible": "P"
+    },
+    {
+      "id": 11,
+      "date": "2020/09",
+      "journal": "Irodalmi Szemle",
+      "journalLogo": "https://irodalmiszemle.sk/wp-content/uploads/2017/01/fejl%C3%A9cnet-vv.jpg",
+      "title": "Szem",
+      "link": "https://irodalmiszemle.sk/2020/09/talos-atanaz-verse/",
+      "type": "vers",
+      "accessible": "O"
+    },
+    {
+      "id": 12,
+      "date": "2020/07",
+      "journal": "KULTer.hu",
+      "journalLogo": "https://www.kulter.hu/wp-content/uploads/2020/09/kulter-logo0.png",
+      "title": "Intimitás [...]",
+      "link": "https://www.kulter.hu/2020/07/talos-barbara-versei-3/",
+      "type": "vers",
+      "accessible": "O"
+    },
+    {
+      "id": 13,
+      "date": "2020/01",
+      "journal": "KULTer.hu",
+      "journalLogo": "https://www.kulter.hu/wp-content/uploads/2020/09/kulter-logo0.png",
+      "title": "Tovább [...]",
+      "link": "https://www.kulter.hu/2020/01/talos-barbara-versei-2/",
+      "type": "vers",
+      "accessible": "O"
+    },
+    {
+      "id": 14,
+      "date": "2019/07",
+      "journal": "KULTer.hu",
+      "journalLogo": "https://www.kulter.hu/wp-content/uploads/2020/09/kulter-logo0.png",
+      "title": "Gyerekjáték [...]",
+      "link": "https://www.kulter.hu/2019/07/talos-barbara-versei/",
+      "type": "vers",
+      "accessible": "O"
+    }
+  ]
+}

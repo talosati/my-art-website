@@ -1,21 +1,53 @@
 {
-  "name": "my-art-website",
+  "name": "kayak-airlines",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.4.1",
+    "@types/node": "^16.11.26",
+    "@types/react": "^17.0.40",
+    "@types/react-dom": "^17.0.13",
+    "dotenv-webpack": "^7.1.0",
+    "install": "^0.13.0",
+    "json-server": "^0.17.0",
+    "npm": "^8.5.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",
+    "sass": "^1.49.9",
+    "styled-components": "^5.3.3",
+    "typescript": "^4.6.2",
     "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "@types/dotenv-webpack": "^7.0.3",
+    "@types/styled-components": "^5.1.24",
+    "@typescript-eslint/eslint-plugin": "^5.14.0",
+    "@typescript-eslint/parser": "^5.14.0",
+    "css-loader": "^6.7.1",
+    "eslint": "^8.11.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.29.3",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "file-loader": "^6.2.0",
+    "prettier": "2.5.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "eslint": "npx eslint src/app/components/*/*.tsx --quiet --fix",
+    "prettier": "npx prettier --write src/app/components/*/*.tsx src/app/components/*.ts src/app/hooks/*.ts",
+    "json-server": "json-server --watch src/app/data/db.json --port 8000"
   },
   "eslintConfig": {
     "extends": [
