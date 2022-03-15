@@ -1,5 +1,6 @@
 <h1><img src="src/assets/images/onbeszed-logo.svg" width="200px" alt="onbeszed"><br>My art website</h1>
-<p>Hello, I am Atanas Tálos, in my free time I am a writer and a graphic designer. Here you can see my poems, short stories and my vector graphics!</p>
+<p>Hello, my name is Atanas Tálos, I live in Berlin, and in my free time I am a writer and a graphic designer. 
+Here you can see my Hungarian poems, short stories and my vector graphics!</p>
 
 <h2>About me</h2>
 <p>I am working as a full-stack developer. I have 1,5 year experience with Java (Spring Boot) and TypeScript (React, Angular).
