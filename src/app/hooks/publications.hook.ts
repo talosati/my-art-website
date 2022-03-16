@@ -8,6 +8,7 @@ export interface Publication {
     title: string;
     link: string;
     type: string;
+    poemOrShortStory: string;
     accessible: string;
 }
 

@@ -113,6 +113,11 @@ export const Platform: PublicationType = {
     P: 'Print',
 };
 
+export const FormOfWork: PublicationType = {
+    V: 'Vers',
+    N: 'Próza',
+};
+
 export default function PublicationsComponent(): JSX.Element {
     const publications = usePublications();
 
@@ -185,15 +190,32 @@ export default function PublicationsComponent(): JSX.Element {
                             {Platform[key]}
                         </FilterLabel>
                     ))}
+                    {Object.keys(FormOfWork).map((key, index) => (
+                        // eslint-disable-next-line react/no-array-index-key
+                        <FilterLabel key={index}>
+                            <FilterInput
+                                type="checkbox"
+                                defaultChecked={false}
+                                onChange={(event) =>
+                                    collectActiveFilters(Platform[key], event)
+                                }
+                            />
+                            {FormOfWork[key]}
+                        </FilterLabel>
+                    ))}
                 </CheckBoxContainer>
             </FilterContainer>
             <CardContainer>
                 {activeFilters.length !== 0
                     ? publications
-                          ?.filter((publication) =>
-                              activeFilters.includes(
-                                  Platform[publication.accessible]
-                              )
+                          ?.filter(
+                              (publication) =>
+                                  activeFilters.includes(
+                                      Platform[publication.accessible]
+                                  ) ||
+                                  activeFilters.includes(
+                                      FormOfWork[publication.poemOrShortStory]
+                                  )
                           )
                           .map((filteredAirline) => getCard(filteredAirline))
                     : publications?.map((publication) => getCard(publication))}

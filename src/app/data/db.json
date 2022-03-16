@@ -2,42 +2,46 @@
   "publications": [
     {
       "id": 1,
-      "date": "2022/02",
+      "date": "2022/03",
       "journal": "PRAE.HU",
       "journalLogo": "https://www.praekiado.hu/wp-content/uploads/2020/09/praelogo-300x296-black.png",
       "title": "Berlin, Spandau (4)",
       "link": "https://www.prae.hu/article/12700-berlin-spandau-4/",
       "type": "tárca",
+      "poemOrShortStory": "N",
       "accessible": "O"
     },
     {
       "id": 2,
-      "date": "2022/02",
+      "date": "2022/03",
       "journal": "PRAE.HU",
       "journalLogo": "https://www.praekiado.hu/wp-content/uploads/2020/09/praelogo-300x296-black.png",
       "title": "Berlin, Spandau (3)",
       "link": "https://www.prae.hu/article/12679-berlin-spandau-3/",
       "type": "tárca",
+      "poemOrShortStory": "N",
       "accessible": "O"
     },
     {
       "id": 3,
-      "date": "2022/03",
+      "date": "2022/02",
       "journal": "PRAE.HU",
       "journalLogo": "https://www.praekiado.hu/wp-content/uploads/2020/09/praelogo-300x296-black.png",
       "title": "Berlin, Spandau (2)",
       "link": "https://www.prae.hu/article/12665-berlin-spandau-2/",
       "type": "tárca",
+      "poemOrShortStory": "N",
       "accessible": "O"
     },
     {
       "id": 4,
-      "date": "2022/03",
+      "date": "2022/02",
       "journal": "PRAE.HU",
       "journalLogo": "https://www.praekiado.hu/wp-content/uploads/2020/09/praelogo-300x296-black.png",
       "title": "Berlin, Spandau (1)",
       "link": "https://www.prae.hu/article/12634-berlin-spandau-1/",
       "type": "tárca",
+      "poemOrShortStory": "N",
       "accessible": "O"
     },
     {
@@ -48,6 +52,7 @@
       "title": "Nincs",
       "link": "https://www.szifonline.hu/szepirodalom/proza/2603-nincs-2022-01-06",
       "type": "novella",
+      "poemOrShortStory": "N",
       "accessible": "O"
     },
     {
@@ -58,6 +63,7 @@
       "title": "Folyók [...]",
       "link": "https://holdkatlan.hu/index.php/szepirodalom/vers/11314-talos-atanaz-versei-folyok-poraz-kapcsolat",
       "type": "vers",
+      "poemOrShortStory": "V",
       "accessible": "O"
     },
     {
@@ -68,6 +74,7 @@
       "title": "Tárgy",
       "link": "https://holdkatlan.hu/index.php/gorcso/10777-talos-atanaz-targy",
       "type": "vers",
+      "form": "V",
       "accessible": "O"
     },
     {
@@ -78,6 +85,7 @@
       "title": "((( )))",
       "link": "https://www.instagram.com/p/CQJqVcuBc9D/",
       "type": "vers",
+      "poemOrShortStory": "V",
       "accessible": "P"
     },
     {
@@ -88,6 +96,7 @@
       "title": "Nyár",
       "link": "https://holdkatlan.hu/index.php/szepirodalom/vers/10648-talos-atanaz-nyar",
       "type": "vers",
+      "form": "V",
       "accessible": "O"
     },
     {
@@ -98,6 +107,7 @@
       "title": "Krízis",
       "link": "https://ujforras.hu/megjelent-az-uj-forras-majusi-szama-5/",
       "type": "novella",
+      "poemOrShortStory": "N",
       "accessible": "P"
     },
     {
@@ -108,6 +118,7 @@
       "title": "Szem",
       "link": "https://irodalmiszemle.sk/2020/09/talos-atanaz-verse/",
       "type": "vers",
+      "poemOrShortStory": "V",
       "accessible": "O"
     },
     {
@@ -118,6 +129,7 @@
       "title": "Intimitás [...]",
       "link": "https://www.kulter.hu/2020/07/talos-barbara-versei-3/",
       "type": "vers",
+      "poemOrShortStory": "V",
       "accessible": "O"
     },
     {
@@ -128,6 +140,7 @@
       "title": "Tovább [...]",
       "link": "https://www.kulter.hu/2020/01/talos-barbara-versei-2/",
       "type": "vers",
+      "poemOrShortStory": "V",
       "accessible": "O"
     },
     {
@@ -138,6 +151,7 @@
       "title": "Gyerekjáték [...]",
       "link": "https://www.kulter.hu/2019/07/talos-barbara-versei/",
       "type": "vers",
+      "poemOrShortStory": "V",
       "accessible": "O"
     }
   ]
