@@ -74,7 +74,7 @@
       "title": "Tárgy",
       "link": "https://holdkatlan.hu/index.php/gorcso/10777-talos-atanaz-targy",
       "type": "vers",
-      "form": "V",
+      "poemOrShortStory": "V",
       "accessible": "O"
     },
     {
@@ -96,7 +96,7 @@
       "title": "Nyár",
       "link": "https://holdkatlan.hu/index.php/szepirodalom/vers/10648-talos-atanaz-nyar",
       "type": "vers",
-      "form": "V",
+      "poemOrShortStory": "V",
       "accessible": "O"
     },
     {

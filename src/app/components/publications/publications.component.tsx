@@ -175,7 +175,7 @@ export default function PublicationsComponent(): JSX.Element {
         <>
             <Title>Publikációk</Title>
             <FilterContainer>
-                <FilterTitle>Hol olvasható?</FilterTitle>
+                <FilterTitle>Milyen formában olvasható?</FilterTitle>
                 <CheckBoxContainer>
                     {Object.keys(Platform).map((key, index) => (
                         // eslint-disable-next-line react/no-array-index-key
@@ -197,7 +197,7 @@ export default function PublicationsComponent(): JSX.Element {
                                 type="checkbox"
                                 defaultChecked={false}
                                 onChange={(event) =>
-                                    collectActiveFilters(Platform[key], event)
+                                    collectActiveFilters(FormOfWork[key], event)
                                 }
                             />
                             {FormOfWork[key]}
@@ -206,7 +206,7 @@ export default function PublicationsComponent(): JSX.Element {
                 </CheckBoxContainer>
             </FilterContainer>
             <CardContainer>
-                {activeFilters.length !== 0
+                {activeFilters.length > 0
                     ? publications
                           ?.filter(
                               (publication) =>
