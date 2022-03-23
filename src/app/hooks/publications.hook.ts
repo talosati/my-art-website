@@ -16,7 +16,9 @@ export function usePublications(): Publication[] | undefined {
     const [publications, setPublications] = useState<Publication[]>([]);
 
     useEffect(() => {
-        fetch('http://localhost:8000/publications?_sort=date&_order=desc')
+        fetch(
+            'http://localhost:8000/publications?_sort=date,title&_order=desc,desc'
+        )
             .then((response) => {
                 response.json().then((fetchedPublications) => {
                     setPublications(fetchedPublications);

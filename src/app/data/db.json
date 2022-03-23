@@ -153,6 +153,17 @@
       "type": "vers",
       "poemOrShortStory": "V",
       "accessible": "O"
+    },
+    {
+      "id": 15,
+      "date": "2022/03",
+      "journal": "PRAE.HU",
+      "journalLogo": "https://www.praekiado.hu/wp-content/uploads/2020/09/praelogo-300x296-black.png",
+      "title": "Berlin, Spandau (5)",
+      "link": "https://www.prae.hu/article/12709-berlin-spandau-5/",
+      "type": "tárca",
+      "poemOrShortStory": "N",
+      "accessible": "O"
     }
   ]
 }
