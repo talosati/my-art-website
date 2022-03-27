@@ -193,12 +193,7 @@ export default function PublicationsComponent(): JSX.Element {
         );
     }
 
-    const paginate =
-        () =>
-        (pageNumber: number): void => {
-            setCurrentPage(pageNumber);
-            console.log('parent');
-        };
+    const paginate = (pageNumber: number): void => setCurrentPage(pageNumber);
 
     return (
         <>

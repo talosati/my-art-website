@@ -16,19 +16,15 @@ export default function Pagination(props: {
         }
     }
 
-    const handlePaginate =
-        () =>
-        (pageNumber: number): void => {
-            paginate(pageNumber);
-            // eslint-disable-next-line no-console
-            console.log('child');
-        };
-
     return (
         <ul className="pagination">
             {pageNumbers.map((number) => (
                 <li key={number} className="page-item">
-                    <a onClick={handlePaginate} href="!#" className="page-link">
+                    <a
+                        onClick={() => paginate(number)}
+                        href="!#"
+                        className="page-link"
+                    >
                         {number}
                     </a>
                 </li>
