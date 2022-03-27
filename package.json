@@ -46,7 +46,7 @@
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "eslint": "npx eslint src/app/components/*/*.tsx --quiet --fix",
-    "prettier": "npx prettier --write src/app/components/*/*.tsx src/app/components/*.ts src/app/hooks/*.ts",
+    "prettier": "npx prettier --write src/app/components/*/*.tsx src/app/components/*.ts src/app/components/*.tsx src/app/hooks/*.ts",
     "json-server": "json-server --watch src/app/data/db.json --port 8000"
   },
   "eslintConfig": {

@@ -13,6 +13,7 @@ import {
     LineHeights,
     FontSizes,
 } from '../layout';
+import Pagination from '../pagination';
 
 const CardContainer = styled.div`
     display: grid;
@@ -125,6 +126,13 @@ export default function PublicationsComponent(): JSX.Element {
     const [activePlatforms, setActivePlatforms] = useState(result);
     const [activeForms, setActiveForms] = useState(result);
 
+    const [currentPage, setCurrentPage] = useState(1);
+    const [cardsPerPage] = useState(5);
+
+    const indexOfLastCard = currentPage * cardsPerPage;
+    const indexOfFirstCard = indexOfLastCard - cardsPerPage;
+    const currentCards = publications?.slice(indexOfFirstCard, indexOfLastCard);
+
     function collectActiveFilters(
         changingFilter: string,
         event: ChangeEvent<HTMLInputElement>,
@@ -185,6 +193,13 @@ export default function PublicationsComponent(): JSX.Element {
         );
     }
 
+    const paginate =
+        () =>
+        (pageNumber: number): void => {
+            setCurrentPage(pageNumber);
+            console.log('parent');
+        };
+
     return (
         <>
             <Title>Publikációk</Title>
@@ -240,8 +255,8 @@ export default function PublicationsComponent(): JSX.Element {
                                       FormOfWork[publication.poemOrShortStory]
                                   )
                           )
-                          .map((filteredAirline, index) =>
-                              getCard(filteredAirline, index)
+                          .map((filteredPublications, index) =>
+                              getCard(filteredPublications, index)
                           )
                     : // eslint-disable-next-line no-nested-ternary
                     activePlatforms.length > 0 && activeForms.length === 0
@@ -251,8 +266,8 @@ export default function PublicationsComponent(): JSX.Element {
                                   Platform[publication.accessible]
                               )
                           )
-                          .map((filteredAirline, index) =>
-                              getCard(filteredAirline, index)
+                          .map((filteredPublications, index) =>
+                              getCard(filteredPublications, index)
                           )
                     : activePlatforms.length === 0 && activeForms.length > 0
                     ? publications
@@ -261,13 +276,18 @@ export default function PublicationsComponent(): JSX.Element {
                                   FormOfWork[publication.poemOrShortStory]
                               )
                           )
-                          .map((filteredAirline, index) =>
-                              getCard(filteredAirline, index)
+                          .map((filteredPublications, index) =>
+                              getCard(filteredPublications, index)
                           )
-                    : publications?.map((publication, index) =>
+                    : currentCards?.map((publication, index) =>
                           getCard(publication, index)
                       )}
             </CardContainer>
+            <Pagination
+                cardsPerPage={cardsPerPage}
+                totalCards={publications?.length}
+                paginate={paginate}
+            />
         </>
     );
 }
