@@ -153,9 +153,9 @@ export default function PublicationsComponent(): JSX.Element {
         }
     }
 
-    function getCard(publication: Publication): JSX.Element {
+    function getCard(publication: Publication, index: number): JSX.Element {
         return (
-            <Card>
+            <Card key={index}>
                 <a href={publication.link} target="_blank" rel="noreferrer">
                     <Logo
                         src={publication.journalLogo}
@@ -191,7 +191,7 @@ export default function PublicationsComponent(): JSX.Element {
             <FilterContainer>
                 <FilterTitle>Milyen formában olvasható?</FilterTitle>
                 <CheckBoxContainer>
-                    {Object.keys(Platform).map((key, index) => (
+                    {Object.keys(Platform).map((keyOfPlatform, index) => (
                         // eslint-disable-next-line react/no-array-index-key
                         <FilterLabel key={index}>
                             <FilterInput
@@ -199,16 +199,16 @@ export default function PublicationsComponent(): JSX.Element {
                                 defaultChecked={false}
                                 onChange={(event) =>
                                     collectActiveFilters(
-                                        Platform[key],
+                                        Platform[keyOfPlatform],
                                         event,
                                         true
                                     )
                                 }
                             />
-                            {Platform[key]}
+                            {Platform[keyOfPlatform]}
                         </FilterLabel>
                     ))}
-                    {Object.keys(FormOfWork).map((key, index) => (
+                    {Object.keys(FormOfWork).map((keyOfForm, index) => (
                         // eslint-disable-next-line react/no-array-index-key
                         <FilterLabel key={index}>
                             <FilterInput
@@ -216,13 +216,13 @@ export default function PublicationsComponent(): JSX.Element {
                                 defaultChecked={false}
                                 onChange={(event) =>
                                     collectActiveFilters(
-                                        FormOfWork[key],
+                                        FormOfWork[keyOfForm],
                                         event,
                                         false
                                     )
                                 }
                             />
-                            {FormOfWork[key]}
+                            {FormOfWork[keyOfForm]}
                         </FilterLabel>
                     ))}
                 </CheckBoxContainer>
@@ -240,7 +240,9 @@ export default function PublicationsComponent(): JSX.Element {
                                       FormOfWork[publication.poemOrShortStory]
                                   )
                           )
-                          .map((filteredAirline) => getCard(filteredAirline))
+                          .map((filteredAirline, index) =>
+                              getCard(filteredAirline, index)
+                          )
                     : // eslint-disable-next-line no-nested-ternary
                     activePlatforms.length > 0 && activeForms.length === 0
                     ? publications
@@ -249,7 +251,9 @@ export default function PublicationsComponent(): JSX.Element {
                                   Platform[publication.accessible]
                               )
                           )
-                          .map((filteredAirline) => getCard(filteredAirline))
+                          .map((filteredAirline, index) =>
+                              getCard(filteredAirline, index)
+                          )
                     : activePlatforms.length === 0 && activeForms.length > 0
                     ? publications
                           ?.filter((publication) =>
@@ -257,8 +261,12 @@ export default function PublicationsComponent(): JSX.Element {
                                   FormOfWork[publication.poemOrShortStory]
                               )
                           )
-                          .map((filteredAirline) => getCard(filteredAirline))
-                    : publications?.map((publication) => getCard(publication))}
+                          .map((filteredAirline, index) =>
+                              getCard(filteredAirline, index)
+                          )
+                    : publications?.map((publication, index) =>
+                          getCard(publication, index)
+                      )}
             </CardContainer>
         </>
     );
