@@ -122,20 +122,34 @@ export default function PublicationsComponent(): JSX.Element {
     const publications = usePublications();
 
     const result: string[] = [];
-    const [activeFilters, setActiveFilters] = useState(result);
+    const [activePlatforms, setActivePlatforms] = useState(result);
+    const [activeForms, setActiveForms] = useState(result);
 
     function collectActiveFilters(
-        filter: string,
-        event: ChangeEvent<HTMLInputElement>
+        changingFilter: string,
+        event: ChangeEvent<HTMLInputElement>,
+        isPlatform: boolean
     ): void {
         if (event.target.checked) {
-            setActiveFilters([...activeFilters, filter]);
-        } else {
-            const lessFilter = activeFilters.splice(
-                0,
-                activeFilters.indexOf(filter)
+            if (isPlatform) {
+                setActivePlatforms([...activePlatforms, changingFilter]);
+            } else {
+                setActiveForms([...activeForms, changingFilter]);
+            }
+        } else if (isPlatform) {
+            const lessFilter = activePlatforms.filter(
+                (el) =>
+                    activePlatforms.indexOf(el) !==
+                    activePlatforms.indexOf(changingFilter)
             );
-            setActiveFilters(lessFilter);
+            setActivePlatforms(lessFilter);
+        } else {
+            const lessFilter = activeForms.filter(
+                (el) =>
+                    activeForms.indexOf(el) !==
+                    activeForms.indexOf(changingFilter)
+            );
+            setActiveForms(lessFilter);
         }
     }
 
@@ -184,7 +198,11 @@ export default function PublicationsComponent(): JSX.Element {
                                 type="checkbox"
                                 defaultChecked={false}
                                 onChange={(event) =>
-                                    collectActiveFilters(Platform[key], event)
+                                    collectActiveFilters(
+                                        Platform[key],
+                                        event,
+                                        true
+                                    )
                                 }
                             />
                             {Platform[key]}
@@ -197,7 +215,11 @@ export default function PublicationsComponent(): JSX.Element {
                                 type="checkbox"
                                 defaultChecked={false}
                                 onChange={(event) =>
-                                    collectActiveFilters(FormOfWork[key], event)
+                                    collectActiveFilters(
+                                        FormOfWork[key],
+                                        event,
+                                        false
+                                    )
                                 }
                             />
                             {FormOfWork[key]}
@@ -206,16 +228,34 @@ export default function PublicationsComponent(): JSX.Element {
                 </CheckBoxContainer>
             </FilterContainer>
             <CardContainer>
-                {activeFilters.length > 0
+                {/* eslint-disable-next-line no-nested-ternary */}
+                {activePlatforms.length > 0 && activeForms.length > 0
                     ? publications
                           ?.filter(
                               (publication) =>
-                                  activeFilters.includes(
+                                  activePlatforms.includes(
                                       Platform[publication.accessible]
-                                  ) ||
-                                  activeFilters.includes(
+                                  ) &&
+                                  activeForms.includes(
                                       FormOfWork[publication.poemOrShortStory]
                                   )
+                          )
+                          .map((filteredAirline) => getCard(filteredAirline))
+                    : // eslint-disable-next-line no-nested-ternary
+                    activePlatforms.length > 0 && activeForms.length === 0
+                    ? publications
+                          ?.filter((publication) =>
+                              activePlatforms.includes(
+                                  Platform[publication.accessible]
+                              )
+                          )
+                          .map((filteredAirline) => getCard(filteredAirline))
+                    : activePlatforms.length === 0 && activeForms.length > 0
+                    ? publications
+                          ?.filter((publication) =>
+                              activeForms.includes(
+                                  FormOfWork[publication.poemOrShortStory]
+                              )
                           )
                           .map((filteredAirline) => getCard(filteredAirline))
                     : publications?.map((publication) => getCard(publication))}
