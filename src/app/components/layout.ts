@@ -26,7 +26,7 @@ export const Title = styled.h1`
     line-height: ${LineHeights.big};
     font-weight: 700;
     color: ${theme.normal};
-    margin: 67px 0 73px 94px;
+    margin: 67px 0 40px 94px;
 
     @media (max-width: 1280px) {
         margin-left: 50px;
