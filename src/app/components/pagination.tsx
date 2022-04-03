@@ -70,6 +70,7 @@ export default function Pagination(props: {
         <PaginationContainer className="pagination">
             {pageNumbers.map((number) => (
                 <PageLink
+                    key={number}
                     onClick={() => {
                         setActiveCard(number);
                         paginate(number);
