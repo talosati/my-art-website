@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { ChangeEvent, useEffect, useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 import { Publication, usePublications } from '../../hooks/publications.hook';
 import {
     theme,
@@ -129,37 +129,9 @@ export default function PublicationsComponent(): JSX.Element {
     const [currentPage, setCurrentPage] = useState(1);
     const [cardsPerPage] = useState(5);
 
-    function getPublications(): Publication[] | undefined {
-        if (activePlatforms.length > 0 && activeForms.length > 0) {
-            return publications?.filter(
-                (publication) =>
-                    activePlatforms.includes(
-                        Platform[publication.accessible]
-                    ) &&
-                    activeForms.includes(
-                        FormOfWork[publication.poemOrShortStory]
-                    )
-            );
-        }
-        if (activePlatforms.length > 0 && activeForms.length === 0) {
-            return publications?.filter((publication) =>
-                activePlatforms.includes(Platform[publication.accessible])
-            );
-        }
-        if (activePlatforms.length === 0 && activeForms.length > 0) {
-            return publications?.filter((publication) =>
-                activeForms.includes(FormOfWork[publication.poemOrShortStory])
-            );
-        }
-        return publications;
-    }
-
     const indexOfLastCard = currentPage * cardsPerPage;
     const indexOfFirstCard = indexOfLastCard - cardsPerPage;
-    const currentCards = getPublications()?.slice(
-        indexOfFirstCard,
-        indexOfLastCard
-    );
+    const currentCards = publications?.slice(indexOfFirstCard, indexOfLastCard);
 
     function collectActiveFilters(
         changingFilter: string,
@@ -223,9 +195,6 @@ export default function PublicationsComponent(): JSX.Element {
 
     const paginate = (pageNumber: number): void => setCurrentPage(pageNumber);
 
-    // eslint-disable-next-line no-console
-    console.log(currentCards?.length);
-
     return (
         <>
             <Title>Publikációk</Title>
@@ -269,13 +238,49 @@ export default function PublicationsComponent(): JSX.Element {
                 </CheckBoxContainer>
             </FilterContainer>
             <CardContainer>
-                {currentCards?.map((publication, index) =>
-                    getCard(publication, index)
-                )}
+                {/* eslint-disable-next-line no-nested-ternary */}
+                {activePlatforms.length > 0 && activeForms.length > 0
+                    ? publications
+                          ?.filter(
+                              (publication) =>
+                                  activePlatforms.includes(
+                                      Platform[publication.accessible]
+                                  ) &&
+                                  activeForms.includes(
+                                      FormOfWork[publication.poemOrShortStory]
+                                  )
+                          )
+                          .map((filteredPublications, index) =>
+                              getCard(filteredPublications, index)
+                          )
+                    : // eslint-disable-next-line no-nested-ternary
+                    activePlatforms.length > 0 && activeForms.length === 0
+                    ? publications
+                          ?.filter((publication) =>
+                              activePlatforms.includes(
+                                  Platform[publication.accessible]
+                              )
+                          )
+                          .map((filteredPublications, index) =>
+                              getCard(filteredPublications, index)
+                          )
+                    : activePlatforms.length === 0 && activeForms.length > 0
+                    ? publications
+                          ?.filter((publication) =>
+                              activeForms.includes(
+                                  FormOfWork[publication.poemOrShortStory]
+                              )
+                          )
+                          .map((filteredPublications, index) =>
+                              getCard(filteredPublications, index)
+                          )
+                    : currentCards?.map((publication, index) =>
+                          getCard(publication, index)
+                      )}
             </CardContainer>
             <Pagination
                 cardsPerPage={cardsPerPage}
-                totalCards={currentCards?.length}
+                totalCards={publications?.length}
                 paginate={paginate}
             />
         </>
