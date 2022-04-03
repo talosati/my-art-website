@@ -1,4 +1,51 @@
 import * as React from 'react';
+import styled from 'styled-components';
+import { theme } from './layout';
+
+const PaginationContainer = styled.ul`
+    display: flex;
+    flex-direction: row;
+    margin: 23px 0 56px 94px;
+    list-style-type: none;
+    padding: 0;
+
+    @media (max-width: 1280px) {
+        margin-left: 50px;
+    }
+`;
+
+const Page = styled.li`
+    width: 30px;
+    height: 30px;
+    background: ${theme.border};
+    border: solid 1px ${theme.border};
+    border-radius: 8px;
+    box-shadow: 0 -1px 4px 0 rgba(25, 32, 36, 0.04),
+        0 3px 6px 0 rgba(25, 32, 36, 0.16);
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        border: solid 1px ${theme.normal};
+    }
+`;
+
+const PageLink = styled.a`
+    text-decoration: none;
+    color: ${theme.normal};
+
+    &:focus,
+    &:active {
+        color: ${theme.border};
+
+        > li {
+            background: ${theme.normal};
+            border: solid 1px ${theme.normal};
+        }
+    }
+`;
 
 export default function Pagination(props: {
     cardsPerPage: number;
@@ -17,18 +64,18 @@ export default function Pagination(props: {
     }
 
     return (
-        <ul className="pagination">
+        <PaginationContainer className="pagination">
             {pageNumbers.map((number) => (
-                <li key={number} className="page-item">
-                    <a
-                        onClick={() => paginate(number)}
-                        href="!#"
-                        className="page-link"
-                    >
+                <PageLink
+                    onClick={() => paginate(number)}
+                    href="!#"
+                    className="page-link"
+                >
+                    <Page key={number} className="page-item">
                         {number}
-                    </a>
-                </li>
+                    </Page>
+                </PageLink>
             ))}
-        </ul>
+        </PaginationContainer>
     );
 }
