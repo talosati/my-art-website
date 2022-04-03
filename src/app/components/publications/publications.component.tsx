@@ -131,7 +131,6 @@ export default function PublicationsComponent(): JSX.Element {
 
     const indexOfLastCard = currentPage * cardsPerPage;
     const indexOfFirstCard = indexOfLastCard - cardsPerPage;
-    const currentCards = publications?.slice(indexOfFirstCard, indexOfLastCard);
 
     function collectActiveFilters(
         changingFilter: string,
@@ -193,6 +192,36 @@ export default function PublicationsComponent(): JSX.Element {
         );
     }
 
+    function getPublications(
+        filterablePublications: Publication[] | undefined
+    ): Publication[] | undefined {
+        let filteredPublications = filterablePublications;
+        if (activePlatforms.length > 0 && activeForms.length > 0) {
+            filteredPublications = filterablePublications?.filter(
+                (publication) =>
+                    activePlatforms.includes(
+                        Platform[publication.accessible]
+                    ) &&
+                    activeForms.includes(
+                        FormOfWork[publication.poemOrShortStory]
+                    )
+            );
+        } else if (activePlatforms.length > 0 && activeForms.length === 0) {
+            filteredPublications = filterablePublications?.filter(
+                (publication) =>
+                    activePlatforms.includes(Platform[publication.accessible])
+            );
+        } else if (activePlatforms.length === 0 && activeForms.length > 0) {
+            filteredPublications = filterablePublications?.filter(
+                (publication) =>
+                    activeForms.includes(
+                        FormOfWork[publication.poemOrShortStory]
+                    )
+            );
+        }
+        return filteredPublications?.slice(indexOfFirstCard, indexOfLastCard);
+    }
+
     const paginate = (pageNumber: number): void => setCurrentPage(pageNumber);
 
     return (
@@ -238,45 +267,9 @@ export default function PublicationsComponent(): JSX.Element {
                 </CheckBoxContainer>
             </FilterContainer>
             <CardContainer>
-                {/* eslint-disable-next-line no-nested-ternary */}
-                {activePlatforms.length > 0 && activeForms.length > 0
-                    ? publications
-                          ?.filter(
-                              (publication) =>
-                                  activePlatforms.includes(
-                                      Platform[publication.accessible]
-                                  ) &&
-                                  activeForms.includes(
-                                      FormOfWork[publication.poemOrShortStory]
-                                  )
-                          )
-                          .map((filteredPublications, index) =>
-                              getCard(filteredPublications, index)
-                          )
-                    : // eslint-disable-next-line no-nested-ternary
-                    activePlatforms.length > 0 && activeForms.length === 0
-                    ? publications
-                          ?.filter((publication) =>
-                              activePlatforms.includes(
-                                  Platform[publication.accessible]
-                              )
-                          )
-                          .map((filteredPublications, index) =>
-                              getCard(filteredPublications, index)
-                          )
-                    : activePlatforms.length === 0 && activeForms.length > 0
-                    ? publications
-                          ?.filter((publication) =>
-                              activeForms.includes(
-                                  FormOfWork[publication.poemOrShortStory]
-                              )
-                          )
-                          .map((filteredPublications, index) =>
-                              getCard(filteredPublications, index)
-                          )
-                    : currentCards?.map((publication, index) =>
-                          getCard(publication, index)
-                      )}
+                {getPublications(publications)?.map((publication, index) =>
+                    getCard(publication, index)
+                )}
             </CardContainer>
             <Pagination
                 cardsPerPage={cardsPerPage}

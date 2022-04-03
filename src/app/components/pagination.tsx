@@ -58,7 +58,7 @@ export default function Pagination(props: {
     const { totalCards } = props;
     const { cardsPerPage } = props;
     const { paginate } = props;
-    const [activeCard, setActiveCard] = useState(0);
+    const [activeCard, setActiveCard] = useState(1);
 
     if (totalCards) {
         for (let i = 1; i <= Math.ceil(totalCards / cardsPerPage); i += 1) {
