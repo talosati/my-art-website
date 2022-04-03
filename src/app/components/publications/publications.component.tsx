@@ -219,7 +219,7 @@ export default function PublicationsComponent(): JSX.Element {
                     )
             );
         }
-        return filteredPublications?.slice(indexOfFirstCard, indexOfLastCard);
+        return filteredPublications;
     }
 
     const paginate = (pageNumber: number): void => setCurrentPage(pageNumber);
@@ -267,13 +267,13 @@ export default function PublicationsComponent(): JSX.Element {
                 </CheckBoxContainer>
             </FilterContainer>
             <CardContainer>
-                {getPublications(publications)?.map((publication, index) =>
-                    getCard(publication, index)
-                )}
+                {getPublications(publications)
+                    ?.slice(indexOfFirstCard, indexOfLastCard)
+                    .map((publication, index) => getCard(publication, index))}
             </CardContainer>
             <Pagination
                 cardsPerPage={cardsPerPage}
-                totalCards={publications?.length}
+                totalCards={getPublications(publications)?.length}
                 paginate={paginate}
             />
         </>
