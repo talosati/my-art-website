@@ -29,9 +29,7 @@ const Page = styled.li`
     justify-content: center;
 
     &:hover {
-        background: ${theme.normal};
         border: solid 1px ${theme.normal};
-        color: ${theme.border};
     }
 `;
 
