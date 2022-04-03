@@ -1,5 +1,6 @@
 import * as React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { useState } from 'react';
 import { theme } from './layout';
 
 const PaginationContainer = styled.ul`
@@ -28,7 +29,9 @@ const Page = styled.li`
     justify-content: center;
 
     &:hover {
+        background: ${theme.normal};
         border: solid 1px ${theme.normal};
+        color: ${theme.border};
     }
 `;
 
@@ -36,8 +39,7 @@ const PageLink = styled.a`
     text-decoration: none;
     color: ${theme.normal};
 
-    &:focus,
-    &:active {
+    &.active {
         color: ${theme.border};
 
         > li {
@@ -56,6 +58,7 @@ export default function Pagination(props: {
     const { totalCards } = props;
     const { cardsPerPage } = props;
     const { paginate } = props;
+    const [activeCard, setActiveCard] = useState(0);
 
     if (totalCards) {
         for (let i = 1; i <= Math.ceil(totalCards / cardsPerPage); i += 1) {
@@ -67,9 +70,12 @@ export default function Pagination(props: {
         <PaginationContainer className="pagination">
             {pageNumbers.map((number) => (
                 <PageLink
-                    onClick={() => paginate(number)}
+                    onClick={() => {
+                        setActiveCard(number);
+                        paginate(number);
+                    }}
                     href="!#"
-                    className="page-link"
+                    className={`page-link ${activeCard === number && 'active'}`}
                 >
                     <Page key={number} className="page-item">
                         {number}
