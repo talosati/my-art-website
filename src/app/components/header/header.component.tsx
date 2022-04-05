@@ -1,21 +1,23 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import LogoSrc from '../../../assets/images/onbeszed-logo.svg';
-import { theme } from '../layout';
 
 const HeaderContainer = styled.div`
-    background-color: ${theme.border};
-    height: 232px;
+    justify-content: flex-start;
+    padding-left: 30px !important;
+    position: fixed;
+    top: 0;
 `;
 
 const Logo = styled.img`
-    margin: 19px 16px;
-    height: 200px;
+    margin: 19px 0;
+    height: 36px;
+    width: 36px;
 `;
 
 export default function HeaderComponent(): JSX.Element {
     return (
-        <HeaderContainer>
+        <HeaderContainer className="header">
             <Logo src={LogoSrc} alt="onbeszed-logo" />
         </HeaderContainer>
     );

@@ -1,12 +1,12 @@
 import * as React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { useState } from 'react';
 import { theme } from './layout';
 
 const PaginationContainer = styled.ul`
     display: flex;
     flex-direction: row;
-    margin: 23px 0 56px 94px;
+    margin: 23px 0 56px 30px;
     list-style-type: none;
     padding: 0;
 

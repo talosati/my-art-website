@@ -19,10 +19,9 @@ const CardContainer = styled.div`
     display: grid;
     grid-gap: 16px;
     grid-template-columns: repeat(4, 1fr);
-    margin: 0 94px;
+    margin: 0 30px;
 
-    @media (max-width: 1280px) {
-        margin: 0 50px;
+    @media (max-width: 1400px) {
         grid-template-columns: repeat(3, 1fr);
     }
 
@@ -30,7 +29,7 @@ const CardContainer = styled.div`
         grid-template-columns: repeat(2, 1fr);
     }
 
-    @media (max-width: 420px) {
+    @media (max-width: 550px) {
         grid-template-columns: 1fr;
     }
 
@@ -87,7 +86,7 @@ const TextContainer = styled.div`
 
 const FilterContainer = styled.div`
     background-color: inherit;
-    margin: 0 0 56px 94px;
+    margin: 0 0 56px 30px;
 
     @media (max-width: 1280px) {
         margin-left: 50px;

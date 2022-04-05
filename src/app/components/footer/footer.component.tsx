@@ -3,16 +3,10 @@ import styled from 'styled-components';
 import { theme } from '../layout';
 
 const FooterContainer = styled.div`
-    background-color: ${theme.border};
-    height: 52px;
-    padding: 19px 16px;
     margin-top: 56px;
-    color: ${theme.normal};
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: center;
-    width: 100%;
+    position: fixed;
+    bottom: 0;
 `;
 
 const Link = styled.a`
@@ -20,6 +14,8 @@ const Link = styled.a`
     font-weight: bold;
     color: ${theme.normal};
     text-align: center;
+    word-break: break-word;
+    padding-right: 20px;
 `;
 
 export default function FooterComponent(): JSX.Element {
