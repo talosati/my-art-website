@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import LogoSrc from '../../../assets/images/onbeszed-logo.svg';
+import { FontSizes, LineHeights, theme } from '../layout';
 
 const HeaderContainer = styled.div`
     justify-content: flex-start;
@@ -8,6 +8,14 @@ const HeaderContainer = styled.div`
     position: fixed;
     top: 0;
     flex-direction: row;
+`;
+
+const HeaderTitle = styled.h1`
+    font-size: ${FontSizes.huge};
+    line-height: ${LineHeights.huge};
+    font-weight: 700;
+    color: ${theme.dark};
+    margin: 19px 0;
 `;
 
 const Logo = styled.img`
@@ -19,7 +27,7 @@ const Logo = styled.img`
 export default function HeaderComponent(): JSX.Element {
     return (
         <HeaderContainer className="header">
-            <Logo src={LogoSrc} alt="onbeszed-logo" />
+            <HeaderTitle>Önbeszéd</HeaderTitle>
         </HeaderContainer>
     );
 }

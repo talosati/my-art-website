@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const theme = {
+    box: '#d0ceba',
     normal: '#ffffff',
     border: '#eef1f2',
     light: '#514f50',
@@ -9,22 +10,24 @@ export const theme = {
 };
 
 export const FontSizes = {
-    big: '44px',
-    middle: '16px',
-    normal: '14px',
+    huge: '45px',
+    big: '27px',
+    middle: '17px',
+    normal: '15px',
 };
 
 export const LineHeights = {
-    big: '48px',
-    middle: '18px',
-    normal: '16px',
+    huge: '48px',
+    big: '30px',
+    middle: '20px',
+    normal: '18px',
 };
 
 const TextMargin = '5px 0';
 
-export const Title = styled.h1`
-    font-size: ${FontSizes.big};
-    line-height: ${LineHeights.big};
+export const Title = styled.h2`
+    font-size: ${FontSizes.huge};
+    line-height: ${LineHeights.huge};
     font-weight: 700;
     color: ${theme.normal};
     margin: 67px 0 40px 30px;
@@ -34,10 +37,10 @@ export const Title = styled.h1`
     }
 `;
 
-export const FilterTitle = styled.h2`
+export const FilterTitle = styled.h3`
     font-weight: bold;
-    font-size: ${FontSizes.middle};
-    line-height: ${LineHeights.middle};
+    font-size: ${FontSizes.big};
+    line-height: ${LineHeights.big};
     color: ${theme.normal};
 `;
 
