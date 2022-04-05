@@ -41,7 +41,7 @@ const CardContainer = styled.div`
 const Card = styled.div`
     width: 300px;
     height: 240px;
-    background: ${theme.border};
+    background: ${theme.background};
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,17 +51,18 @@ const Card = styled.div`
         0 3px 6px 0 rgba(25, 32, 36, 0.16);
 
     &:hover {
-        border: solid 1px ${theme.normal};
+        background: ${theme.border};
 
         .text-container {
             .text-title {
                 font-size: ${FontSizes.normal};
                 line-height: ${LineHeights.normal};
+                color: ${theme.dark};
             }
 
-            .details,
-            .site {
+            .details {
                 display: block;
+                color: ${theme.dark};
             }
         }
     }
@@ -87,10 +88,6 @@ const TextContainer = styled.div`
 const FilterContainer = styled.div`
     background-color: inherit;
     margin: 0 0 56px 30px;
-
-    @media (max-width: 1280px) {
-        margin-left: 50px;
-    }
 
     @media (max-width: 320px) {
         margin-left: 20px;
@@ -126,7 +123,7 @@ export default function PublicationsComponent(): JSX.Element {
     const [activeForms, setActiveForms] = useState(result);
 
     const [currentPage, setCurrentPage] = useState(1);
-    const [cardsPerPage] = useState(5);
+    const [cardsPerPage] = useState(8);
 
     const indexOfLastCard = currentPage * cardsPerPage;
     const indexOfFirstCard = indexOfLastCard - cardsPerPage;

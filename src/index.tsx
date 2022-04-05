@@ -27,7 +27,6 @@ const PageContainer = styled.div`
         color: ${theme.normal};
         width: 100%;
         display: flex;
-        flex-direction: row;
         align-items: center;
     }
 `;

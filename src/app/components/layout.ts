@@ -2,9 +2,10 @@ import styled from 'styled-components';
 
 export const theme = {
     normal: '#ffffff',
-    light: '#5a6872',
-    background: '#0f0c29',
-    border: '#302b63',
+    border: '#eef1f2',
+    light: '#514f50',
+    background: '#2a2a2a',
+    dark: '#000000',
 };
 
 export const FontSizes = {

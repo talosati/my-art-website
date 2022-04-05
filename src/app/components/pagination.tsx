@@ -9,17 +9,13 @@ const PaginationContainer = styled.ul`
     margin: 23px 0 56px 30px;
     list-style-type: none;
     padding: 0;
-
-    @media (max-width: 1280px) {
-        margin-left: 50px;
-    }
 `;
 
 const Page = styled.li`
     width: 30px;
     height: 30px;
-    background: ${theme.border};
-    border: solid 1px ${theme.border};
+    background: ${theme.background};
+    border: solid 1px ${theme.background};
     border-radius: 8px;
     box-shadow: 0 -1px 4px 0 rgba(25, 32, 36, 0.04),
         0 3px 6px 0 rgba(25, 32, 36, 0.16);
@@ -29,20 +25,20 @@ const Page = styled.li`
     justify-content: center;
 
     &:hover {
-        border: solid 1px ${theme.normal};
+        border: solid 1px ${theme.border};
     }
 `;
 
 const PageLink = styled.a`
     text-decoration: none;
-    color: ${theme.normal};
+    color: ${theme.border};
 
     &.active {
-        color: ${theme.border};
+        color: ${theme.dark};
 
         > li {
-            background: ${theme.normal};
-            border: solid 1px ${theme.normal};
+            background: ${theme.border};
+            border: solid 1px ${theme.border};
         }
     }
 `;

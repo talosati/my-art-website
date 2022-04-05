@@ -1,21 +1,21 @@
 body {
   margin: 0;
   font-family: 'LatoThin', serif;
-  background: #0f0c29;
+  background: #2a2a2a;
 }
 
 h1 {
-  font-family: 'LiebeLotteThin', serif;
+  font-family: 'ExploraReg', serif;
 }
 
 @font-face {
-  font-family: 'LiebeLotteThin';
+  font-family: 'ExploraReg';
   font-style: normal;
   font-weight: normal;
   font-display: swap;
-  src: url('/src/assets/fonts/LiebeLotte.ttf') format('truetype'),
-  url('/src/assets/fonts/LiebeLotte.woff') format('woff'),
-  url('/src/assets/fonts/LiebeLotte.woff2') format('woff2');
+  src: url('/src/assets/fonts/Explora-Regular.ttf') format('truetype'),
+  url('/src/assets/fonts/Explora-Regular.woff') format('woff'),
+  url('/src/assets/fonts/Explora-Regular.woff2') format('woff2');
 }
 
 @font-face {

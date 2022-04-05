@@ -7,22 +7,27 @@ const FooterContainer = styled.div`
     justify-content: center;
     position: fixed;
     bottom: 0;
+    flex-direction: column;
 `;
 
 const Link = styled.a`
     text-decoration: none;
     font-weight: bold;
-    color: ${theme.normal};
+    color: ${theme.dark};
     text-align: center;
     word-break: break-word;
     padding-right: 20px;
+    margin-bottom: 5px;
 `;
 
 export default function FooterComponent(): JSX.Element {
     return (
         <FooterContainer className="footer">
             <Link href="http://www.onlinewebfonts.com" target="_blank">
-                Font made from oNline Web Fonts is licensed by CC BY 3.0
+                Lato is made from oNline Web Fonts
+            </Link>
+            <Link href="https://en.bestfonts.pro/" target="_blank">
+                Explora is designed by Robert Leuschke
             </Link>
         </FooterContainer>
     );

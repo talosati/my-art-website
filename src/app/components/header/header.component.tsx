@@ -7,6 +7,7 @@ const HeaderContainer = styled.div`
     padding-left: 30px !important;
     position: fixed;
     top: 0;
+    flex-direction: row;
 `;
 
 const Logo = styled.img`
